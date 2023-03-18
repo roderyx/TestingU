@@ -14,6 +14,7 @@ public class inputManager : MonoBehaviour{
 
     // Local variables
     private Vector2 MovementInput;
+    private bool jumpPressed;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,6 @@ public class inputManager : MonoBehaviour{
     }
 
     void OnJump(InputValue value){
-        InputValue jump = value;
+        jumpPressed = value.isPressed;
     }
 }
